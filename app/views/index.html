@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/assets/newsdrop.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="/assets/underscore-min.js"></script>
+  <script type="text/javascript" src="/assets/mustache.js"></script>
+  <script type="text/javascript" src="/assets/newsdrop.js"></script>
+  <!--
+  /* @license
+   * MyFonts Webfont Build ID 2324655, 2012-07-15T12:03:40-0400
+   * 
+   * The fonts listed in this notice are subject to the End User License
+   * Agreement(s) entered into by the website owner. All other parties are 
+   * explicitly restricted from using the Licensed Webfonts(s).
+   * 
+   * You may obtain a valid license at the URLs below.
+   * 
+   * Webfont: Museo Slab 500 by exljbris
+   * URL: http://www.myfonts.com/fonts/exljbris/museo-slab/500/
+   * Copyright: Copyright (c) 2009 by Jos Buivenga. All rights reserved.
+   * Licensed pageviews: Unlimited
+   * 
+   * 
+   * License: http://www.myfonts.com/viewlicense?type=web&buildid=2324655
+   * 
+   * © 2012 Bitstream Inc
+  */
+
+  -->
+  <link rel="stylesheet" type="text/css" href="/assets/MyFontsWebfontsKit.css">
+  <style type="text/css">
+  body {
+  font-family: 'Open Sans', 'lucida grande', 'Segoe UI', arial, verdana, 'lucida sans unicode', tahoma, sans-serif;
+  padding: 0;
+  margin: 0;
+  }
+  h1,h2,h3,h4,h5,h6 {
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    /*background: rgba(255, 241, 224, 0.3);*/
+    background: url(/assets/bg.jpg) center bottom no-repeat fixed;
+    padding-bottom:200px;
+  }
+  #body-inner {
+    width: 600px;
+    margin: 0 auto;
+    background-color: rgba(255,255,255,0.8);
+    padding: 20px;
+  }
+  h1, h1 a {
+    font-size: 64px;
+    letter-spacing: -2px;
+    height: 78px;
+    font-family: MuseoSlab-500;
+    font-weight: bold;
+    font-style: normal;
+    color: #2281CF;
+    text-decoration: none;
+  }
+  </style>
+</head>
+<body>
+<div id="body-inner">
+
+<h1><a href="/">Fieldbox</a></h1>
+
+<div id="intro">
+
+<!--<p><strong>The scenario:</strong> you are a high-powered editor-in-chief of a newspaper that is making strong efforts into new media and real-time spaces. However, you've noticed that media journalists take too long to update their photos (and video!) to the system to display on your website. If you don't fix this, some other newspaper is going to become more real-time than you are! You've also noticed that a lot of your reporters use <a href="http://dropbox.com">Dropbox</a>, and are always talking about how simple and easy-to-use it is.</p>
+
+<p><strong>Your mission, should you choose to accept it,</strong> is to test drive a new web interface that aggregates photos from your reporters Dropbox Camera Uploads. After they take less than a minute to open the Dropbox mobile app and automatically upload media, you can instantly pick and choose the photos you want for the breaking news stories of the next hour. Remember, every minute counts!</p>-->
+
+<p><a href="#" id="ready-link">Are you ready?</a></p>
+
+</div>
+
+<div id="congrats" style="display: none">
+  <p><strong>Congratulations,</strong> you just selected a photo! This page was set up using the Javascript API exposed by the Fieldbox widget. You can hook into callbacks to do anything you want with the photos!</p>
+</div>
+
+<div id="newsdrop-target" style="display: none">
+  <p>Select from all Dropbox photos in your organization:</p>
+  <div class="inner"></div>
+</div>
+
+</div>
+<script type="text/javascript">
+  $(document).ready(function() {
+
+    var target = $("#newsdrop-target");
+    var inner = target.find(".inner");
+    Newsdrop.init(inner);
+    Newsdrop.onImageClicked(function(path) {
+      target.hide();
+      $("#congrats").show();
+      $("#congrats").append("<div class=\"unconstrained-photo-box\"><img src=\"" + path + "\"></div>");
+    });
+    
+    //$("#ready-link").click(function(){
+      $("#intro").hide();
+      target.show();
+    //})
+
+  })
+</script>
+</body>
+</html>

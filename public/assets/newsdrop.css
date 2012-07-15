@@ -1,0 +1,143 @@
+.loading {
+  padding: 20px;
+}
+
+.clear {
+  clear: both;
+}
+
+.angle-bracket {
+  font-size: 15px;
+  position: relative;
+  top: -3px;
+  font-family: Helvetica;
+}
+
+.sprite {
+  width: 32px;
+  height: 32px;
+  float: left;
+  margin-right: 8px;
+}
+
+.newsdrop-breadcrumbs {
+  font-size: 20px;
+  font-weight: 600;
+  height: 35px;
+  line-height: 32px;
+}
+.newsdrop-breadcrumbs a {
+  color: #2281CF;
+  text-decoration: none;
+}
+.newsdrop-breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+#newsdrop-header {
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),inset 0 0 0 black;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),inset 0 0 0 black;
+  border-top: 1px solid #82CFFA;
+  border-bottom: 1px solid #96C4EA;
+  border-left: 1px solid #E7F2FB;
+  border-right: 1px solid #E7F2FB;
+  background: #F0F9FF url(/static/images/white_pixel.gif) repeat-x;
+
+  line-height: 29px;
+  padding: 3px 6px;
+  height: 29px;
+}
+#newsdrop-header .column-header {
+  float: left;
+  margin-bottom: 0;
+  font-size: 13px;
+  line-height: 29px;
+  font-weight: 600;
+  color: #2281CF;
+  text-decoration: none;
+}
+.column-person {
+  width: 50%;
+}
+.column-files {
+  width: 20%;
+}
+
+#newsdrop-data ol {
+  margin: 0;
+  padding: 0;
+}
+#newsdrop-data li {
+  padding: 5px 6px;
+  margin: 0 0 -1px 0;
+  line-height: 32px;
+  color: black;
+  list-style: none;
+  border: 1px solid #edf1f5;
+  border-width: 1px 0;
+  font-size: 13px;
+}
+#newsdrop-data li:hover {
+  background-color: rgba(230, 245, 255, 0.3);
+}
+#newsdrop-data li a {
+  color: black;
+  text-decoration: none;
+}
+#newsdrop-data li div:hover {
+  text-decoration: underline;
+}
+.column-cell {
+  float: left;
+}
+
+
+.loading {
+  height: 100px;
+  width: 100px;
+}
+
+.unconstrained-photo-box {
+  padding: 1px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+.unconstrained-photo-box img {
+  background-color: #F6F6F6;
+  text-align: center;
+}
+.photo-box {
+  width: 128px;
+  height: 128px;
+  float: left;
+  overflow: hidden;
+  margin: 9px;
+  padding:1px;
+  background-color: #F6F6F6;
+  position: relative;
+  cursor: pointer;
+}
+.small-photo-box {
+  width: 80px;
+  height: 80px;
+  float: left;
+  overflow: hidden;
+  margin: 9px;
+  padding: 1px;
+  background-color: #F6F6F6;
+  position: relative;
+  cursor: pointer;
+}
+.photo-box .img {
+  background-size: cover;
+  background-position: center;
+}
+.photo-box .overlay, .small-photo-box .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.photo-box .overlay:hover, .small-photo-box .overlay:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}

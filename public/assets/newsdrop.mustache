@@ -1,0 +1,44 @@
+<div id="newsdrop-view-index">
+  <div class="newsdrop-breadcrumbs">
+    Latest photos
+  </div>
+  <div id="newsdrop-latest-photos"><div class="loading">Loading...</div></div>
+  <br class="clear">
+  <div class="newsdrop-breadcrumbs">
+    People
+  </div>
+  <div id="newsdrop-header">
+    <div class="column-header column-person">Name</div>
+    <div class="column-header column-files">Photos</div>
+    <div class="column-header column-mtime">Last Upload</div>
+  </div>
+  <div id="newsdrop-data">
+    <ol>
+      {{#people}}
+      <li class="person" data-person-id="{{id}}" data-person-name="{{name}}">
+        <a href="#">
+        <div class="column-cell column-person">
+          <img class="sprite" src="{{avatar}}">
+          {{name}}
+        </div>
+        <div class="column-cell column-files">Loading...</div>
+        <div class="column-cell column-mtime">Loading...</div>
+        <br class="clear">
+        </a>
+      </li>
+      {{/people}}
+    </ol>
+  </div>
+</div>
+<div id="newsdrop-view-photos" style="display: none;">
+  <div class="newsdrop-breadcrumbs">
+    <a class="index-link" href="#">People</a> <span class="angle-bracket">&gt;</span> <img class="sprite" id="newsdrop-breadcrumb-sprite"><span class="breadcrumb-name"></span>
+  </div>
+  <div id="newsdrop-header">
+    <div class="column-header">Photos</div>
+  </div>
+  <div id="newsdrop-data">
+    <div class="loading">Loading...</div>
+  </div>
+  <br class="clear">
+</div>
