@@ -6,10 +6,10 @@ if Newsdrop::Application.env == 'development'
 
   # Enable code reloading on every request
   use Rack::Reloader, 0
-
-  # Serve assets from /public
-  use Rack::Static, :urls => ["/assets"], :root => Newsdrop::Application.root(:public)
 end
+
+# Serve assets from /public
+use Rack::Static, :urls => ["/assets"], :root => Newsdrop::Application.root(:public)
 
 # Running thin :
 #
